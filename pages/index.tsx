@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   }
 
   const gameOver = (reason: string) => {
-    console.log('game over - ', reason)
+    // console.log('game over - ', reason)
     setIsGameOver(true)
     setReason(reason)
     setKey(Math.random())
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
     }
 
     if (isCorrect) {
-      console.log('correct')
+      // console.log('correct')
       setScore(prev => prev + 1)
       setQuestion(generateQuestion())
       setKey(Math.random())
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
 
-      <div>Score: {score}</div>
+      <h1>Score: {score}</h1>
 
       <div>
         <CountdownCircleTimer
